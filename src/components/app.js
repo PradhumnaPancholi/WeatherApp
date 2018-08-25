@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import WeatherList from '../containers/weather_list';
 
 //components//
 import SearchBar from '../containers/search_bar';
@@ -8,7 +9,8 @@ export default class App extends Component {
     return (
       <div>
         <SearchBar />
-      </div>    
+        <WeatherList />
+      </div>
     );
   }
 }
