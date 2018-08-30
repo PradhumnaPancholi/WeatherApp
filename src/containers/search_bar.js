@@ -14,13 +14,14 @@ class SearchBar extends Component{
   }
 
   onInputChange(event) {
-    this.setState({ term: event.target.value });
+    this.setState({ term: event.target.value});
   }
 
   onFormSubmit(event) {
     event.preventDefault();
     //fetch data from API//
     this.props.fetchWeatherData(this.state.term);
+    this.setState({term : ''});
   }
 
   render() {
